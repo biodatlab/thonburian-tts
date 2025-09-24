@@ -107,6 +107,33 @@ This workflow enables:
 
 ---
 
+## **Example Outputs**
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://youtu.be/rvmNgh0-jws">
+        <img src="https://img.youtube.com/vi/rvmNgh0-jws/0.jpg" width="320"><br>
+        🎵 Sample 1 – Single-speaker Thai Normal Text
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://youtu.be/jVz3EpRTn1U">
+        <img src="https://img.youtube.com/vi/jVz3EpRTn1U/0.jpg" width="320"><br>
+        🎵 Sample 2 – Single-Speaker Thai Code-mixed Text
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://youtu.be/sbaOdMhz3Z4">
+        <img src="https://img.youtube.com/vi/sbaOdMhz3Z4/0.jpg" width="320"><br>
+        🎵 Sample 3 – Multi-Speaker Conversational Speech
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## **Developers**
 
 * [Biomedical and Data Lab, Mahidol University](https://biodatlab.github.io/)
