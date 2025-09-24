@@ -10,8 +10,8 @@
 
 ---
 
-## **Thonburian F5-TTS**
-**Thonburian F5-TTS** is a **Thai Text-to-Speech (TTS)** engine built on top of the [F5-TTS](https://github.com/SWivid/F5-TTS).  
+## **Thonburian TTS**
+**Thonburian TTS** is a **Thai Text-to-Speech (TTS)** engine built on top of the [F5-TTS](https://github.com/SWivid/F5-TTS).  
 It generates **natural and expressive Thai speech** by leveraging **Flow-Matching diffusion techniques** and can **mimic reference voices** from short audio samples.
 
 The system supports:
