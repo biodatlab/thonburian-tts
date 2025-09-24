@@ -163,3 +163,7 @@ Or cite as a written reference:
 
 - **Codes:** Released under the [MIT License](LICENSE-MIT).
 - **Models:** Released under the [Creative Commons Attribution Non-Commercial ShareAlike 4.0 License (CC BY-NC-SA 4.0)](LICENSE-CC-BY-NC-SA).
+
+---
+## Reference
+- [F5-TTS Original Repository](https://github.com/SWivid/F5-TTS)
