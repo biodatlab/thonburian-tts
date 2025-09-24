@@ -6,7 +6,7 @@
   <img src="assets/looloo-logo.png" width="200" />
 </p>
 
-[🔊 Model Checkpoint](https://huggingface.co/ThuraAung1601/E2-F5-TTS) | [🤗 Gradio App Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Related Whisper Paper]()
+[🔊 Model Checkpoint](https://huggingface.co/ThuraAung1601/E2-F5-TTS) | [🤗 Gradio App Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Related Thonburian-Whisper Paper](https://aclanthology.org/2024.icnlsp-1.17/)
 
 ---
 
