@@ -1,32 +1,47 @@
 <p align="center">
-  <img src="assets/ThonburianTTSLogo.png" width="400"/>
+  <img src="assets/ThonburianTTSLogo.png" width="400"/><br>
+  <img src="assets/looloo-logo.png" width="150" />
 </p>
 
-<p align="center">
-  <img src="assets/looloo-logo.png" width="200" />
-</p>
-
-[🔊 Model Checkpoint](https://huggingface.co/ThuraAung1601/E2-F5-TTS) | [🤗 Gradio App Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Related Thonburian-Whisper Paper](https://aclanthology.org/2024.icnlsp-1.17/)
-
----
+[🔊 Model Checkpoints](https://huggingface.co/ThuraAung1601/E2-F5-TTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian TTS Paper](https://aclanthology.org/2024.icnlsp-1.17/)
 
 ## **Thonburian TTS**
-**Thonburian TTS** is a **Thai Text-to-Speech (TTS)** engine built on top of the [F5-TTS](https://github.com/SWivid/F5-TTS).  
-It generates **natural and expressive Thai speech** by leveraging **Flow-Matching diffusion techniques** and can **mimic reference voices** from short audio samples.
 
-The system supports:
+**Thonburian TTS** is a **Thai Text-to-Speech (TTS)** engine built on top of the [F5-TTS](https://github.com/SWivid/F5-TTS).  
+It generates **natural and expressive Thai speech** by leveraging **Flow-Matching diffusion techniques** and can **mimic reference voices** from short audio samples. The system supports:
+
 - **Thai language generation** (`language="th"`)
 - **Reference-based voice cloning** using short audio clips
 - High-quality synthesis with controllable speed and silence trimming
 - Hugging Face integration for **easy deployment and hosting**
 
----
+### **Pipeline Overview**
+
+The end-to-end **Thai voice cloning workflow**:
+
+```
+  Reference Voice (Thai Speech)
+            ↓
+Optional: Thonburian Whisper (ASR)
+            ↓
+ Transcribed Reference Text
+            ↓
+         F5-TTS
+            ↓
+  Generated Thai Speech
+```
+
+This workflow enables:
+- **High-quality Thai speech generation** from text
+- Voice cloning with **style and tone preservation**
+- Full ASR-TTS integration for interactive voice applications
+
 
 ## **Quick Usage**
 
 Below is a minimal example for generating **Thai speech** with **voice cloning** using a reference sample.
 
-```python
+```py
 from flowtts.inference import FlowTTSPipeline, ModelConfig, AudioConfig
 import torch
 
@@ -64,7 +79,6 @@ output_path = pipeline(
 print(f"Generated F5 audio saved to: {output_path}")
 ```
 
----
 
 ## **Installation**
 
@@ -75,8 +89,6 @@ pip install torch cached-path librosa transformers f5-tts
 sudo apt install ffmpeg
 ```
 
----
-
 ## **Model Checkpoints**
 
 | Model Component        | Description                        | URL                                                                          |
@@ -84,28 +96,6 @@ sudo apt install ffmpeg
 | **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/ThuraAung1601/E2-F5-TTS/F5_Thai)               |
 | **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/ThuraAung1601/E2-F5-TTS/F5_IPA)            |
 
-## **Pipeline Overview**
-
-The end-to-end **Thai voice cloning workflow**:
-
-```
-  Reference Voice (Thai Speech)
-            ↓
-Optional: Thonburian Whisper (ASR)
-            ↓
- Transcribed Reference Text
-            ↓
-         F5-TTS
-            ↓
-  Generated Thai Speech
-```
-
-This workflow enables:
-- **High-quality Thai speech generation** from text
-- Voice cloning with **style and tone preservation**
-- Full ASR-TTS integration for interactive voice applications
-
----
 
 ## **Example Outputs**
 
@@ -136,14 +126,13 @@ This workflow enables:
 
 ## **Developers**
 
-* [Biomedical and Data Lab, Mahidol University](https://biodatlab.github.io/)
-* [Looloo Technology](https://loolootech.com/)
+- [Looloo Technology](https://loolootech.com/)
+- [Biomedical and Data Lab, Mahidol University](https://biodatlab.github.io/)
 
 <p align="center">
   <img width="150px" src="assets/looloo-logo.png" />
 </p>
 
----
 
 ## **Citation**
 
@@ -157,13 +146,8 @@ Or cite as a written reference:
 
 > 
 
----
 
 ## **License**
 
-- **Codes:** Released under the [MIT License](LICENSE-MIT).
-- **Models:** Released under the [Creative Commons Attribution Non-Commercial ShareAlike 4.0 License (CC BY-NC-SA 4.0)](LICENSE-CC-BY-NC-SA).
-
----
-## Reference
-- [F5-TTS Original Repository](https://github.com/SWivid/F5-TTS)
+Our **codes** are released under the [MIT License](LICENSE-MIT).
+The **models** are released under the [Creative Commons Attribution Non-Commercial ShareAlike 4.0 License (CC BY-NC-SA 4.0)](LICENSE-CC-BY-NC-SA).
