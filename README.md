@@ -139,13 +139,8 @@ sudo apt install ffmpeg
 If you use **ThonburianTTS** in your research, please cite:
 
 ```
-
+Thura Aung, Panyut Sriwirote, Thanachot Thavornmongkol, Knot Pipatsrisawat, Titipat Achakulvisut, Zaw Htet Aung, "ThonburianTTS: Enhancing Neural Flow Matching Models for Authentic Thai Text-to-Speech", 2025 20th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP), Phuket, Thailand, 2025, pp. 1-6,
 ```
-
-Or cite as a written reference:
-
-> 
-
 
 ## **License**
 
