@@ -49,8 +49,8 @@ import torch
 model_config = ModelConfig(
     language="th",
     model_type="F5",
-    checkpoint="hf://ThuraAung1601/E2-F5-TTS/F5_Thai/mega_f5_last.safetensors",
-    vocab_file="hf://ThuraAung1601/E2-F5-TTS/F5_Thai/mega_vocab.txt",
+    checkpoint="hf://biodatlab/ThonburianTTS/megaF5/model_1250000.safetensors",
+    vocab_file="hf://biodatlab/ThonburianTTS/megaF5/vocab.txt",
     vocoder="vocos",
     device="cuda" if torch.cuda.is_available() else "cpu"
 )
@@ -93,8 +93,8 @@ sudo apt install ffmpeg
 
 | Model Component        | Description                        | URL                                                                          |
 | ---------------------- | ---------------------------------- | ---------------------------------------------------------------------------- |
-| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/ThuraAung1601/E2-F5-TTS/F5_Thai)               |
-| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/ThuraAung1601/E2-F5-TTS/F5_IPA)            |
+| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS)               |
+| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS)            |
 
 
 ## **Example Outputs**
