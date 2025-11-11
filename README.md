@@ -13,7 +13,6 @@ It generates **natural and expressive Thai speech** by leveraging **Flow-Matchin
 - **Thai language generation** (`language="th"`)
 - **Reference-based voice cloning** using short audio clips
 - High-quality synthesis with controllable speed and silence trimming
-- Hugging Face integration for **easy deployment and hosting**
 
 ### **Pipeline Overview**
 
