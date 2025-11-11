@@ -3,7 +3,7 @@
   <img src="assets/looloo-logo.png" width="150" />
 </p>
 
-[🔊 Model Checkpoints](https://huggingface.co/ThuraAung1601/E2-F5-TTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian TTS Paper](https://aclanthology.org/2024.icnlsp-1.17/)
+[🔊 Model Checkpoints](https://huggingface.co/biodatlab/ThonburianTTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian TTS Paper](https://aclanthology.org/2024.icnlsp-1.17/)
 
 ## **Thonburian TTS**
 
@@ -49,8 +49,8 @@ import torch
 model_config = ModelConfig(
     language="th",
     model_type="F5",
-    checkpoint="hf://biodatlab/ThonburianTTS/megaF5/model_1250000.safetensors",
-    vocab_file="hf://biodatlab/ThonburianTTS/megaF5/vocab.txt",
+    checkpoint="hf://biodatlab/ThonburianTTS/megaF5/mega_f5_last.safetensors",
+    vocab_file="hf://biodatlab/ThonburianTTS/megaF5/mega_vocab.txt",
     vocoder="vocos",
     device="cuda" if torch.cuda.is_available() else "cpu"
 )
@@ -93,8 +93,8 @@ sudo apt install ffmpeg
 
 | Model Component        | Description                        | URL                                                                          |
 | ---------------------- | ---------------------------------- | ---------------------------------------------------------------------------- |
-| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS)               |
-| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS)            |
+| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/megaF5)               |
+| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/megaIPA)            |
 
 
 ## **Example Outputs**
