@@ -92,8 +92,8 @@ sudo apt install ffmpeg
 
 | Model Component        | Description                        | URL                                                                          |
 | ---------------------- | ---------------------------------- | ---------------------------------------------------------------------------- |
-| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/megaF5)               |
-| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/megaIPA)            |
+| **F5-TTS Thai**        | Flow Matching-based Thai TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/tree/main/megaF5)               |
+| **F5-TTS IPA**         | Flow Matching-based Thai-IPA TTS models | [Link](https://huggingface.co/biodatlab/ThonburianTTS/tree/main/megaIPA)            |
 
 
 ## **Example Outputs**
