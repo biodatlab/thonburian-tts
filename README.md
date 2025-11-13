@@ -1,5 +1,6 @@
 <p align="center">
   <img src="assets/ThonburianTTSLogo.png" width="400"/><br>
+  <img src="assets/wordsense-logo.png" width="50px" />
   <img src="assets/looloo-logo.png" width="150" />
 </p>
 
@@ -126,10 +127,12 @@ sudo apt install ffmpeg
 ## **Developers**
 
 - [Looloo Technology](https://loolootech.com/)
+- [WordSense](https://www.facebook.com/WordsenseAI) by [Looloo technology](https://loolootech.com/)
 - [Biomedical and Data Lab, Mahidol University](https://biodatlab.github.io/)
 
 <p align="center">
-  <img width="150px" src="assets/looloo-logo.png" />
+  <img src="assets/wordsense-logo.png" width="50px" />
+  <img src="assets/looloo-logo.png" width="150" />
 </p>
 
 
