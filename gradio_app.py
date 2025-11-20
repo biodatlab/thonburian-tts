@@ -21,7 +21,7 @@ else:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 logo_path = os.path.join(SCRIPT_DIR, "assets/ThonburianTTSLogo.png")
 pipeline_path = os.path.join(SCRIPT_DIR, "assets/tts-workflow.png")
-default_audio_path = os.path.join(SCRIPT_DIR, "/assets/000000.wav")
+default_audio_path = os.path.join(SCRIPT_DIR, "assets/000000.wav")
 
 # Initialize Whisper model for transcription
 MODEL_NAME = "biodatlab/whisper-th-medium-combined"
