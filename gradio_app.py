@@ -153,7 +153,7 @@ with gr.Blocks() as demo:
         )
 
     with gr.Tab("Multi-Speaker"):
-        gr.Markdown("### Multi-Speaker TTS\nProvide speaker references and use `{SpeakerName}` in your script.")
+        gr.Markdown("### Multi-Speaker TTS\nProvide speaker references and use `{Speaker1}` or `{Speaker2}` in your script.")
 
         checkpoint_input_multi = gr.Textbox(label="Checkpoint Path", value="hf://biodatlab/ThonburianTTS/megaF5/mega_f5_last.safetensors")
         vocab_input_multi = gr.Textbox(label="Vocab File", value="hf://biodatlab/ThonburianTTS/megaF5/mega_vocab.txt")
@@ -169,70 +169,36 @@ with gr.Blocks() as demo:
         The reference audio should be 3-10 seconds long and contain natural speech patterns.
         """)
 
-        # Speaker management state
-        speaker_state = gr.State(value=2)  # Start with 2 speakers
+        speaker_labels = [gr.Textbox(label=f"Speaker {i+1} Label", value=f"Speaker{i+1}") for i in range(2)]
         
-        # Container for dynamic speakers
-        speakers_container = gr.Column()
-        
-        def create_speaker_ui(speaker_num):
-            """Create UI components for a single speaker"""
-            with gr.Group():
-                gr.Markdown(f"#### Speaker {speaker_num}")
-                speaker_label = gr.Textbox(label=f"Speaker {speaker_num} Label", value=f"Speaker{speaker_num}")
-                with gr.Row():
-                    speaker_audio = gr.Audio(label=f"Speaker {speaker_num} Reference Audio", type="filepath", sources=["microphone", "upload"])
-                    speaker_text = gr.Textbox(label=f"Speaker {speaker_num} Reference Text")
-                transcribe_btn = gr.Button(f"🎤 Transcribe Speaker {speaker_num}", size="sm")
-                return speaker_label, speaker_audio, speaker_text, transcribe_btn
-        
-        # Initial speakers
-        with speakers_container:
-            speaker_components = []
-            for i in range(2):
-                components = create_speaker_ui(i + 1)
-                speaker_components.append(components)
-                # Connect transcribe button
-                components[3].click(
-                    fn=transcribe_audio,
-                    inputs=[components[1]],
-                    outputs=[components[2]]
-                )
-        
-        # Add/Remove speaker buttons
+        # Speaker 1
         with gr.Row():
-            add_speaker_btn = gr.Button("➕ Add Speaker", size="sm")
-            remove_speaker_btn = gr.Button("➖ Remove Speaker", size="sm")
+            speaker_audios_0 = gr.Audio(label=f"Speaker 1 Reference Audio", type="filepath", sources=["microphone", "upload"])
+            speaker_texts_0 = gr.Textbox(label=f"Speaker 1 Reference Text")
+        transcribe_btn_s1 = gr.Button("🎤 Transcribe Speaker 1", size="sm")
         
-        speaker_info = gr.Markdown("**Current speakers:** 2")
-        
-        def add_speaker(current_count):
-            new_count = current_count + 1
-            return new_count, f"**Current speakers:** {new_count} (Please refresh to see new speaker)"
-        
-        def remove_speaker(current_count):
-            new_count = max(1, current_count - 1)
-            return new_count, f"**Current speakers:** {new_count} (Please refresh to see changes)"
-        
-        add_speaker_btn.click(
-            fn=add_speaker,
-            inputs=[speaker_state],
-            outputs=[speaker_state, speaker_info]
-        )
-        
-        remove_speaker_btn.click(
-            fn=remove_speaker,
-            inputs=[speaker_state],
-            outputs=[speaker_state, speaker_info]
-        )
+        # Speaker 2
+        with gr.Row():
+            speaker_audios_1 = gr.Audio(label=f"Speaker 2 Reference Audio", type="filepath", sources=["microphone", "upload"])
+            speaker_texts_1 = gr.Textbox(label=f"Speaker 2 Reference Text")
+        transcribe_btn_s2 = gr.Button("🎤 Transcribe Speaker 2", size="sm")
 
-        gen_text_multi = gr.Textbox(
-            label="Script (use {SpeakerName} to indicate speakers)", 
-            placeholder='Example:\n{"name": "Speaker1"} สวัสดีครับ\n{"name": "Speaker2"} สวัสดีค่ะ',
-            lines=5
-        )
+        gen_text_multi = gr.Textbox(label="Script (use {Speaker1} and {Speaker2} to indicate speakers)")
         output_audio_multi = gr.Audio(label="Generated Multi-Speaker Audio")
         generate_multi_btn = gr.Button("Generate Multi-Speaker Speech")
+
+        # Transcribe buttons for multi-speaker
+        transcribe_btn_s1.click(
+            fn=transcribe_audio,
+            inputs=[speaker_audios_0],
+            outputs=[speaker_texts_0]
+        )
+        
+        transcribe_btn_s2.click(
+            fn=transcribe_audio,
+            inputs=[speaker_audios_1],
+            outputs=[speaker_texts_1]
+        )
 
         def multi_speaker_inference(
             gen_text,
