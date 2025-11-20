@@ -4,7 +4,7 @@
   <img src="assets/looloo-logo.png" width="150" />
 </p>
 
-[🔊 Model Checkpoints](https://huggingface.co/biodatlab/ThonburianTTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian TTS Paper](https://aclanthology.org/2024.icnlsp-1.17/)
+[🔊 Model Checkpoints](https://huggingface.co/biodatlab/ThonburianTTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian TTS Paper]()
 
 ## **Thonburian TTS**
 
