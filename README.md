@@ -17,24 +17,12 @@ It generates **natural and expressive Thai speech** by leveraging **Flow-Matchin
 
 ### **Pipeline Overview**
 
-The end-to-end **Thai voice cloning workflow**:
-
-```
-  Reference Voice (Thai Speech)
-            ↓
-Optional: Thonburian Whisper (ASR)
-            ↓
- Transcribed Reference Text
-            ↓
-         F5-TTS
-            ↓
-  Generated Thai Speech
-```
+<img src="assets/tts-workflow.png" width="400" />
 
 This workflow enables:
 - **High-quality Thai speech generation** from text
 - Voice cloning with **style and tone preservation**
-- Full ASR-TTS integration for interactive voice applications
+- ASR-TTS integration for interactive voice applications
 
 
 ## **Quick Usage**
