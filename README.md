@@ -4,7 +4,7 @@
   <img src="assets/looloo-logo.png" width="150" />
 </p>
 
-[🔊 Model Checkpoints](https://huggingface.co/biodatlab/ThonburianTTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 Thonburian Whisper Paper](https://aclanthology.org/2024.icnlsp-1.17/) | [Colab Notebook](https://colab.research.google.com/drive/1vIwNMjsyILluNT0l7I8KduS7S2Bhj9ra?usp=sharing) | [GitHub](https://github.com/biodatlab/thonburian-tts)
+[🔊 Model Checkpoints](https://huggingface.co/biodatlab/ThonburianTTS) | [🤗 Gradio Demo](https://github.com/biodatlab/thonburian-tts/blob/main/gradio_app.py) | [📄 ThonburianTTS Paper](https://ieeexplore.ieee.org/document/11320472) | [Colab Notebook](https://colab.research.google.com/drive/1vIwNMjsyILluNT0l7I8KduS7S2Bhj9ra?usp=sharing) | [GitHub](https://github.com/biodatlab/thonburian-tts)
 
 ## **Thonburian TTS**
 
@@ -128,8 +128,22 @@ sudo apt install ffmpeg
 
 If you use **ThonburianTTS** in your research, please cite:
 
-> Thura Aung, Panyut Sriwirote, Thanachot Thavornmongkol, Knot Pipatsrisawat, Titipat Achakulvisut, Zaw Htet Aung, "ThonburianTTS: Enhancing Neural Flow Matching Models for Authentic Thai Text-to-Speech", 2025 20th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP), Phuket, Thailand, 2025, pp. 1-6
+```
+@INPROCEEDINGS{11320472,
+  author={Aung, Thura and Sriwirote, Panyut and Thavornmongkol, Thanachot and Pipatsrisawat, Knot and Achakulvisut, Titipat and Aung, Zaw Htet},
+  booktitle={2025 20th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP)}, 
+  title={ThonburianTTS: Enhancing Neural Flow Matching Models for Authentic Thai Text-to-Speech}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Adaptation models;Codes;Accuracy;Error analysis;Phonetics;Robustness;Natural language processing;Text to speech;Noise measurement;Research and development;Thai text-to-speech;Flow matching;F5-TTS},
+  doi={10.1109/iSAI-NLP66160.2025.11320472}}
+```
 
+```
+Thura Aung, Panyut Sriwirote, Thanachot Thavornmongkol, Knot Pipatsrisawat, Titipat Achakulvisut, Zaw Htet Aung, "ThonburianTTS: Enhancing Neural Flow Matching Models for Authentic Thai Text-to-Speech", 2025 20th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP), Phuket, Thailand, 2025, pp. 1-6, doi: 10.1109/iSAI-NLP66160.2025.11320472.
+```
 
 ## **License**
 
