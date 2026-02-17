@@ -24,6 +24,29 @@ This workflow enables:
 - Voice cloning with **style and tone preservation**
 - ASR-TTS integration for interactive voice applications
 
+## **Installation**
+
+Install directly from GitHub:
+
+```bash
+pip install git+https://github.com/biodatlab/thonburian-tts.git
+```
+
+Or clone and install in development mode:
+
+```bash
+git clone https://github.com/biodatlab/thonburian-tts.git
+cd thonburian-tts
+pip install -e .
+```
+
+**Note**: On Linux systems, you may also need to install `ffmpeg`:
+```bash
+sudo apt install ffmpeg  # Ubuntu/Debian
+# or
+sudo yum install ffmpeg  # CentOS/RHEL
+```
+
 
 ## **Quick Usage**
 
@@ -65,16 +88,6 @@ output_path = pipeline(
     output_file="f5_output.wav"
 )
 print(f"Generated F5 audio saved to: {output_path}")
-```
-
-
-## **Installation**
-
-Install dependencies:
-
-```bash
-pip install torch cached-path librosa transformers f5-tts
-sudo apt install ffmpeg
 ```
 
 ## **Model Checkpoints**
